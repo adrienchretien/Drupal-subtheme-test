@@ -29,18 +29,6 @@ module.exports = function (grunt) {
         }
       }
     },
-    //Currently not using Compass
-    compass: {
-      dev: {
-        options: {
-          sassDir: 'css/sass',
-          cssDir: 'css',
-          imagesPath: 'assets/img',
-          noLineComments: false,
-          outputStyle: 'compressed'
-        }
-      }
-    },
     concat: {
       options: {
         separator: ';'
@@ -57,13 +45,26 @@ module.exports = function (grunt) {
         loopfunc: true
       },
     },
-
+    imagemin: {                          // Task
+      static: {                          // Target
+        options: {                       // Target options
+          optimizationLevel: 3,
+          svgoPlugins: [{ removeViewBox: false }]
+        },
+        files: [{
+          expand: true,
+          cwd: 'images/',
+          src: ['**/*.{png,jpg,gif}'],
+          dest: 'images/'
+        }]
+      }
+    }
   });
-  grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
 
-  grunt.registerTask('default', ['watch']);
+  grunt.registerTask('default', ['watch', 'imagemin']);
 };

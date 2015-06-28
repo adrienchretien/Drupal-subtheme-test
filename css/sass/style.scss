@@ -1,10 +1,13 @@
-/* --------------------------------------------------------------------------
- * Overrides Bootstrap variables
- * -------------------------------------------------------------------------- */
+// --------------------------------------------------------------------------
+// Overrides Bootstrap variables
+// --------------------------------------------------------------------------
 
-/* --------------------------------------------------------------------------
- * Bootstrap import
- * -------------------------------------------------------------------------- */
+$brand-primary: #ff61a0;
+$body-color: #777;
+
+// --------------------------------------------------------------------------
+// Bootstrap import
+// --------------------------------------------------------------------------
 
 @import '../../bootstrap-sass/bootstrap';
 
@@ -19,35 +22,147 @@
  * body: 18px 'Open Sans', sans-serif #777
  * h1: 66px 'Open Sans', sans-serif 300 #555
  * h2: 26px 'Istok Web', sans-serif 700 #555 uppercase mt 50px
- * h3: 21px 'Open Sans', sans-serif 700 mt 30px
+ * h3: 21px 'Open Sans', sans-serif 700 #777 mt 30px
  * .small: 16px
  * .sub-title: 66px 'Shadows Into Light Two', cursive
  * -------------------------------------------------------------------------- */
 
-/* Layout
- * --------------------------------------------------------------------------
- * Wrapper max-width: 940px
- *
- * Grid: up to 4 columns
- * Grid gutter: 20px
- *
- * Main: m 80px 0
- * Section: mb 40px
- * -------------------------------------------------------------------------- */
+html {
+  background-color: #fff;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: $body-color;
+}
+
+h1,
+.h1,
+h2,
+.h2 {
+  color: $gray;
+}
+
+h1,
+.h1 {
+  font-weight: 300;
+}
+
+h2,
+.h2,
+h3,
+.h3 {
+  font-weight: 700;
+}
+
+h2,
+.h2 {
+  font-size: 26px;
+  font-family: 'Istok Web', sans-serif;
+  text-transform: uppercase;
+}
+
+h3,
+.h3 {
+  font-size: 21px;
+}
+
+.sub-title {
+  font-size: 200%;
+  font-family: 'Shadows Into Light Two', cursive;
+  color: $brand-primary;
+}
 
 /* Modules
  * --------------------------------------------------------------------------
  * .footer__top bg-c #555 c #fff fs 21px pt 30px pb 20px
  * .hero mb 80px
- * .nav mt 20px
- * .nav__item d inline-block
- * .nav__link h 80px f 18px 'Istok Web', sans-serif 700 t-d none
- * .nav__link:hover bg-c #ff61a0 c #fff
+ * .navigation mt 20px
+ * .navigation__item d inline-block
+ * .navigation__link h 80px f 18px 'Istok Web', sans-serif 700 t-d none
+ * .navigation__link:hover bg-c #ff61a0 c #fff
  * -------------------------------------------------------------------------- */
 
-/* --------------------------------------------------------------------------
- * Sub-theme import
- * -------------------------------------------------------------------------- */
+.copyright {
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
 
-@import 'includes/variables', 'includes/mixins', 'includes/mobile-nav', 'includes/bugfixes';
-@import 'includes/home', 'includes/blog', 'includes/style-guide';
+.footer {
+  margin-top: 0;
+  /*padding-top: .75em;
+  padding-bottom: .75em;*/
+  background-color: $gray;
+  color: #fff;
+}
+
+.footer__title {
+  color: $brand-primary;
+}
+
+.media {
+  overflow: hidden;
+}
+.media__cover {
+  float: left;
+  margin-right: 1em;
+}
+.media__body {
+  overflow: hidden;
+}
+
+.navigation {
+  float: right;
+  padding-left: 0;
+  list-style: none;
+}
+
+.navigation__item {
+  float: left;
+}
+
+.navigation__link {
+  display: block;
+  padding: 1.5em;
+  font-family: 'Istok Web', sans-serif;
+  font-size: 18px;
+  line-height: 1.45;
+  color: $gray;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.navigation__link:active,
+.navigation__link:focus,
+.navigation__link:hover {
+  background-color: $brand-primary;
+  color: $gray;
+  text-decoration: none;
+}
+
+.page {
+  margin-top: 6em;
+}
+.page__section--header {
+  border: 0;
+  text-align: center;
+}
+
+.page__section {
+  margin-bottom: 3em;
+}
+
+.skip {
+  height: 1.5em;
+}
+
+.social {
+  margin-top: 15px;
+}
+
+// --------------------------------------------------------------------------
+// Sub-theme import
+// -------------------------------------------------------------------------- */
+
+/*@import 'includes/variables', 'includes/mixins', 'includes/mobile-nav', 'includes/bugfixes';
+@import 'includes/home', 'includes/blog', 'includes/style-guide';*/
