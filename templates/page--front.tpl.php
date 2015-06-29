@@ -104,52 +104,78 @@
 <main>
   <div class="container" id="main-content">
     <div class="page">
-      <header role="banner" id="page-header">
-        <?php if (!empty($site_slogan)): ?>
-          <p class="lead"><?php print $site_slogan; ?></p>
-        <?php endif; ?>
+      <header>
+        <div class="page__section page__section--header">
+          <?php print theme('image', array('path' => './sites/all/themes/bootstrap_subtheme/images/designer-buddy.jpg', 'alt' => 'Mascotte de Minima')); ?>
+          <h1>Looking for rockstar graphic designers?</h1>
+          <p class="sub-title">Look no further... we are here to help!</p>
+        </div>
+      </header>
 
-        <?php print render($page['header']); ?>
-      </header> <!-- /#page-header -->
+      <div class="page__section">
+        <h2>Latest projects</h2>
+        <div class="row">
+          <div class="col-md-6 col-sm-12">
+            <ul class="row list-unstyled">
+              <li class="col-xs-6">
+                <?php print theme('image', array('path' => './sites/all/themes/bootstrap_subtheme/images/latest-pix.jpg', 'alt' => 'Aperçu du site PIX Web Design')); ?>
+                <h3>PIX Web Design</h3>
+                <p>Graphic Design</p>
+              </li>
+              <li class="col-xs-6">
+                <?php print theme('image', array('path' => './sites/all/themes/bootstrap_subtheme/images/latest-wp.jpg', 'alt' => 'Aperçu du site Plugin Planet')); ?>
+                <h3>Plugin Planet – Wordpress</h3>
+                <p>Pixel Design</p>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <ul class="row list-unstyled">
+              <li class="col-xs-6">
+                <?php print theme('image', array('path' => './sites/all/themes/bootstrap_subtheme/images/latest-fresh.jpg', 'alt' => 'Aperçu du site Fresh Application')); ?>
+                <h3>Fresh application</h3>
+                <p>Wordpress Theme</p>
+              </li>
+              <li class="col-xs-6">
+                <?php print theme('image', array('path' => './sites/all/themes/bootstrap_subtheme/images/latest-mailapp.jpg', 'alt' => 'Aperçu du site iPhone Mail App')); ?>
+                <h3>iPhone Mail App</h3>
+                <p>Booking</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-      <div class="row">
-
-        <?php if (!empty($page['sidebar_first'])): ?>
-          <aside class="col-sm-3" role="complementary">
-            <?php print render($page['sidebar_first']); ?>
-          </aside>  <!-- /#sidebar-first -->
-        <?php endif; ?>
-
-        <section<?php print $content_column_class; ?>>
-          <?php if (!empty($page['highlighted'])): ?>
-            <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
-          <?php endif; ?>
-          <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
-          <a id="main-content"></a>
-          <?php print render($title_prefix); ?>
-          <?php if (!empty($title)): ?>
-            <h1 class="page-header"><?php print $title; ?></h1>
-          <?php endif; ?>
-          <?php print render($title_suffix); ?>
-          <?php print $messages; ?>
-          <?php if (!empty($tabs)): ?>
-            <?php print render($tabs); ?>
-          <?php endif; ?>
-          <?php if (!empty($page['help'])): ?>
-            <?php print render($page['help']); ?>
-          <?php endif; ?>
-          <?php if (!empty($action_links)): ?>
-            <ul class="action-links"><?php print render($action_links); ?></ul>
-          <?php endif; ?>
-          <?php print render($page['content']); ?>
-        </section>
-
-        <?php if (!empty($page['sidebar_second'])): ?>
-          <aside class="col-sm-3" role="complementary">
-            <?php print render($page['sidebar_second']); ?>
-          </aside>  <!-- /#sidebar-second -->
-        <?php endif; ?>
-
+      <div class="page__section">
+        <h2>How can we help you?</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <h3><span class="glyphicon glyphicon-tint"></span> Web design</h3>
+            <p>Hodor, hodor. Hodor. Hodor, hodor - HODOR hodor, hodor hodor hodor hodor hodor! Hodor. Hodor hodor; hodor hodor. Hodor hodor HODOR! Hodor hodor; hodor hodor - hodor hodor. Hodor hodor HODOR! Hodor hodor hodor hodor, hodor. Hodor hodor. Hodor. Hodor hodor, hodor. Hodor hodor hodor! Hodor! Hodor hodor, hodor... Hodor hodor hodor... Hodor hodor hodor?! Hodor hodor... Hodor hodor hodor - hodor. Hodor! Hodor hodor, hodor, hodor. Hodor hodor, hodor.</p>
+          </div>
+          <div class="col-md-4">
+            <h3><span class="glyphicon glyphicon-tint"></span> Wordpress</h3>
+            <p>Bacon ipsum dolor amet tri-tip pork belly kielbasa pastrami brisket jerky filet mignon, strip steak ground round. Ground round beef ribs pancetta, meatball brisket chicken short loin shankle cow ham leberkas. Alcatra ham hock biltong, andouille pork belly tongue tenderloin pastrami shankle jerky pork chop pork loin. Jowl tongue t-bone tenderloin, beef ribs hamburger frankfurter short loin salami andouille picanha landjaeger biltong fatback.</p>
+          </div>
+          <div class="col-md-4">
+            <h3><span class="glyphicon glyphicon-tint"></span> Social media</h3>
+            <p>That's Calvin Klein, oh my god, he's a dream. He's absolutely right, Marty. the last thing you need is headaches. I don't know, I can't keep up with all of your boyfriends. Marty, that was very interesting music. Scram, McFly. I don't like her, Marty. Any girl who calls a boy is just asking for trouble. Maybe you were adopted. Right. Alright, okay. Alright, there she is, George. Just go in there and invite her. That's for messing up my hair.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <h3><span class="glyphicon glyphicon-tint"></span> Branding</h3>
+            <p>Hey wait, wait a minute, who are you? Stella, another one of these damn kids jumped in front of my car. Come on out here, help me take him in the house. Good, you could start by sweeping the floor. Check out that four by four. That is hot. Someday, Jennifer, someday. Wouldn't it be great to take that truck up to the lake. Throw a couple of sleeping bags in the back. Lie out under the stars. I have to tell you about the future. Doc, wait. No, bastards.</p>
+          </div>
+          <div class="col-md-4">
+            <h3><span class="glyphicon glyphicon-tint"></span> Print design</h3>
+            <p>Bacon ipsum dolor amet fatback hamburger cow shank. Beef frankfurter salami kevin, chuck doner pancetta sausage short ribs venison porchetta. Meatloaf beef salami cupim strip steak frankfurter ground round. Short loin kevin shoulder cow, turducken hamburger sausage meatloaf beef ribs flank jerky ball tip porchetta bresaola. Frankfurter pork pork belly pork chop ham hock. Chuck pancetta porchetta short loin, landjaeger beef ribs prosciutto cow.</p>
+          </div>
+          <div class="col-md-4">
+            <h3><span class="glyphicon glyphicon-tint"></span> Search engine optimization</h3>
+            <p>Hodor hodor - hodor, hodor. Hodor hodor... Hodor hodor hodor hodor! Hodor, hodor; hodor hodor; hodor hodor. Hodor. Hodor. Hodor hodor; hodor hodor, hodor. Hodor hodor?! Hodor hodor - hodor hodor hodor, hodor. Hodor hodor hodor. Hodor! Hodor hodor, HODOR hodor, hodor hodor - hodor. Hodor! Hodor hodor, hodor HODOR hodor, hodor hodor; hodor hodor. Hodor. Hodor, hodor. Hodor. Hodor, hodor; hodor hodor - HODOR hodor, hodor hodor, hodor, hodor hodor. </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
