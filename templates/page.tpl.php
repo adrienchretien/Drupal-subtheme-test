@@ -84,28 +84,36 @@
 
   <div class="page__section">
     <h2>Latest projects</h2>
-    <ul class="row list-unstyled">
-      <li class="col-md-3">
-        <?php print theme('image', array('path' => './sites/all/themes/bootstrap_subtheme/images/latest-pix.jpg', 'alt' => 'Aperçu du site PIX Web Design')); ?>
-        <h3>PIX Web Design</h3>
-        <p>Graphic Design</p>
-      </li>
-      <li class="col-md-3">
-        <?php print theme('image', array('path' => './sites/all/themes/bootstrap_subtheme/images/latest-wp.jpg', 'alt' => 'Aperçu du site Plugin Planet')); ?>
-        <h3>Plugin Planet – Wordpress</h3>
-        <p>Pixel Design</p>
-      </li>
-      <li class="col-md-3">
-        <?php print theme('image', array('path' => './sites/all/themes/bootstrap_subtheme/images/latest-fresh.jpg', 'alt' => 'Aperçu du site Fresh Application')); ?>
-        <h3>Fresh application</h3>
-        <p>Wordpress Theme</p>
-      </li>
-      <li class="col-md-3">
-        <?php print theme('image', array('path' => './sites/all/themes/bootstrap_subtheme/images/latest-mailapp.jpg', 'alt' => 'Aperçu du site iPhone Mail App')); ?>
-        <h3>iPhone Mail App</h3>
-        <p>Booking</p>
-      </li>
-    </ul>
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <ul class="row list-unstyled">
+          <li class="col-xs-6">
+            <?php print theme('image', array('path' => './sites/all/themes/bootstrap_subtheme/images/latest-pix.jpg', 'alt' => 'Aperçu du site PIX Web Design')); ?>
+            <h3>PIX Web Design</h3>
+            <p>Graphic Design</p>
+          </li>
+          <li class="col-xs-6">
+            <?php print theme('image', array('path' => './sites/all/themes/bootstrap_subtheme/images/latest-wp.jpg', 'alt' => 'Aperçu du site Plugin Planet')); ?>
+            <h3>Plugin Planet – Wordpress</h3>
+            <p>Pixel Design</p>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <ul class="row list-unstyled">
+          <li class="col-xs-6">
+            <?php print theme('image', array('path' => './sites/all/themes/bootstrap_subtheme/images/latest-fresh.jpg', 'alt' => 'Aperçu du site Fresh Application')); ?>
+            <h3>Fresh application</h3>
+            <p>Wordpress Theme</p>
+          </li>
+          <li class="col-xs-6">
+            <?php print theme('image', array('path' => './sites/all/themes/bootstrap_subtheme/images/latest-mailapp.jpg', 'alt' => 'Aperçu du site iPhone Mail App')); ?>
+            <h3>iPhone Mail App</h3>
+            <p>Booking</p>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 
   <div class="page__section">

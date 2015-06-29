@@ -36,6 +36,13 @@ body {
   color: $body-color;
 }
 
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+/* Typography */
+
 h1,
 .h1,
 h2,
@@ -83,6 +90,21 @@ h3,
  * .navigation__link:hover bg-c #ff61a0 c #fff
  * -------------------------------------------------------------------------- */
 
+.brand {
+  @media (max-width: $screen-sm-max) {
+    display: block;
+    height: 34px;
+    margin-left: 15px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+}
+.brand img {
+  @media (max-width: $screen-sm-max) {
+    height: 100%;
+  }
+}
+
 .copyright {
   padding-top: 1.5em;
   padding-bottom: 1.5em;
@@ -90,8 +112,6 @@ h3,
 
 .footer {
   margin-top: 0;
-  /*padding-top: .75em;
-  padding-bottom: .75em;*/
   background-color: $gray;
   color: #fff;
 }
@@ -99,6 +119,8 @@ h3,
 .footer__title {
   color: $brand-primary;
 }
+
+.icon-bar { background-color: #000; }
 
 .media {
   overflow: hidden;
@@ -115,10 +137,19 @@ h3,
   float: right;
   padding-left: 0;
   list-style: none;
+  @media (max-width: $screen-sm-min) {
+    float: none;
+  }
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    margin-top: 8px;
+  }
 }
 
 .navigation__item {
   float: left;
+  @media (max-width: $screen-sm-min) {
+    float: none;
+  }
 }
 
 .navigation__link {
@@ -130,6 +161,11 @@ h3,
   color: $gray;
   text-decoration: none;
   text-transform: uppercase;
+
+  @media (max-width: $screen-sm-max) {
+    padding: .5em;
+    font-size: inherit;
+  }
 }
 
 .navigation__link:active,
@@ -164,5 +200,5 @@ h3,
 // Sub-theme import
 // -------------------------------------------------------------------------- */
 
-/*@import 'includes/variables', 'includes/mixins', 'includes/mobile-nav', 'includes/bugfixes';
-@import 'includes/home', 'includes/blog', 'includes/style-guide';*/
+//@import 'includes/variables', 'includes/mixins', 'includes/mobile-nav', 'includes/bugfixes';
+//@import 'includes/home', 'includes/blog', 'includes/style-guide';

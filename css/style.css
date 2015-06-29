@@ -5008,6 +5008,11 @@ body {
   font-family: 'Open Sans', sans-serif;
   color: #777; }
 
+img {
+  height: auto;
+  max-width: 100%; }
+
+/* Typography */
 h1,
 .h1,
 h2,
@@ -5048,19 +5053,32 @@ h3,
  * .navigation__link h 80px f 18px 'Istok Web', sans-serif 700 t-d none
  * .navigation__link:hover bg-c #ff61a0 c #fff
  * -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+  .brand {
+    display: block;
+    height: 34px;
+    margin-left: 15px;
+    margin-top: 8px;
+    margin-bottom: 8px; } }
+
+@media (max-width: 991px) {
+  .brand img {
+    height: 100%; } }
+
 .copyright {
   padding-top: 1.5em;
   padding-bottom: 1.5em; }
 
 .footer {
   margin-top: 0;
-  /*padding-top: .75em;
-  padding-bottom: .75em;*/
   background-color: #555555;
   color: #fff; }
 
 .footer__title {
   color: #ff61a0; }
+
+.icon-bar {
+  background-color: #000; }
 
 .media {
   overflow: hidden; }
@@ -5076,9 +5094,18 @@ h3,
   float: right;
   padding-left: 0;
   list-style: none; }
+  @media (max-width: 768px) {
+    .navigation {
+      float: none; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .navigation {
+      margin-top: 8px; } }
 
 .navigation__item {
   float: left; }
+  @media (max-width: 768px) {
+    .navigation__item {
+      float: none; } }
 
 .navigation__link {
   display: block;
@@ -5089,6 +5116,10 @@ h3,
   color: #555555;
   text-decoration: none;
   text-transform: uppercase; }
+  @media (max-width: 991px) {
+    .navigation__link {
+      padding: .5em;
+      font-size: inherit; } }
 
 .navigation__link:active,
 .navigation__link:focus,
@@ -5112,8 +5143,5 @@ h3,
 
 .social {
   margin-top: 15px; }
-
-/*@import 'includes/variables', 'includes/mixins', 'includes/mobile-nav', 'includes/bugfixes';
-@import 'includes/home', 'includes/blog', 'includes/style-guide';*/
 
 /*# sourceMappingURL=style.css.map */
