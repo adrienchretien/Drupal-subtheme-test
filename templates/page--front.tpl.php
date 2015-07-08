@@ -78,7 +78,7 @@
   <a class="skip__link element-invisible element-focusable" href="#main-content"><?php print t('Skip to main content'); ?></a>
 </div>
 
-<header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+<header class="navbar bs-docs-nav" id="top" role="banner">
   <div class="container">
     <div class="navbar-header">
       <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
