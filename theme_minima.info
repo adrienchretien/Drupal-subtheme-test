@@ -1,4 +1,4 @@
-name = Test.
+name = Minima
 description = A Bootstrap Sub-theme.
 core = 7.x
 base theme = bootstrap
