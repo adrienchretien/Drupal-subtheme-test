@@ -74,5 +74,14 @@ settings[bootstrap_cdn] = ''
 ;
 ; CSS
 ; --------------
-; exclude[css][] = 'bootstrap/css/overrides.css'
+;exclude[css][] = 'modules/system/system.base.css'
+exclude[css][] = 'modules/system/system.menus.css'
+exclude[css][] = 'modules/system/system.messages.css'
+exclude[css][] = 'modules/system/system.theme.css'
+
+exclude[css][] = 'modules/comment/comment.css'
+exclude[css][] = 'modules/field/theme/field.css'
+exclude[css][] = 'modules/node/node.css'
+exclude[css][] = 'modules/search/search.css'
+exclude[css][] = 'modules/user/user.css'
 
