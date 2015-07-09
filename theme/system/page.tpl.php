@@ -87,7 +87,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="brand" href="#"><?php print theme('image', array('path' => './sites/all/themes/bootstrap_subtheme/images/minima-logo-desktop.jpg', 'alt' => 'Minima', 'class' => 'brand-logo')); ?></a>
+      <a class="brand" href="#"><?php print theme('image', array('path' => path_to_theme().'/images/minima-logo-desktop.jpg', 'alt' => 'Minima', 'class' => 'brand-logo')); ?></a>
     </div>
     <nav id="bs-navbar" class="collapse navbar-collapse">
       <ul id="navigation" class="navigation">
@@ -174,10 +174,10 @@
           <p class="media"><span class="media__cover glyphicon glyphicon-envelope"></span> contact@localhost</p>
 
           <ul class="social list-inline">
-            <li><a href="#"><?php print theme('image', array('path' => './sites/all/themes/bootstrap_subtheme/images/social-fb.png', 'alt' => 'Facebook')); ?></a></li>
-            <li><a href="#"><?php print theme('image', array('path' => './sites/all/themes/bootstrap_subtheme/images/social-d.png', 'alt' => 'Dribbble')); ?></a></li>
-            <li><a href="#"><?php print theme('image', array('path' => './sites/all/themes/bootstrap_subtheme/images/social-t.png', 'alt' => 'Twitter')); ?></a></li>
-            <li><a href="#"><?php print theme('image', array('path' => './sites/all/themes/bootstrap_subtheme/images/social-rss.png', 'alt' => 'RSS')); ?></a></li>
+            <li><a href="#"><?php print theme('image', array('path' => path_to_theme().'/images/social-fb.png', 'alt' => 'Facebook')); ?></a></li>
+            <li><a href="#"><?php print theme('image', array('path' => path_to_theme().'/images/social-d.png', 'alt' => 'Dribbble')); ?></a></li>
+            <li><a href="#"><?php print theme('image', array('path' => path_to_theme().'/images/social-t.png', 'alt' => 'Twitter')); ?></a></li>
+            <li><a href="#"><?php print theme('image', array('path' => path_to_theme().'/images/social-rss.png', 'alt' => 'RSS')); ?></a></li>
           </ul>
         </div>
         <div class="col-md-4 col-sm-6">

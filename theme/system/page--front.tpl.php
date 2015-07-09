@@ -87,7 +87,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="brand" href="#"><?php print theme('image', array('path' => './sites/all/themes/bootstrap_subtheme/images/minima-logo-desktop.jpg', 'alt' => 'Minima', 'class' => 'brand-logo')); ?></a>
+      <a class="brand" href="#"><?php print theme('image', array('path' => path_to_theme().'/images/minima-logo-desktop.jpg', 'alt' => 'Minima', 'class' => 'brand-logo')); ?></a>
     </div>
     <nav id="bs-navbar" class="collapse navbar-collapse">
       <ul id="navigation" class="navigation">
@@ -106,7 +106,7 @@
     <div class="page">
       <header>
         <div class="page__section page__section--header">
-          <?php print theme('image', array('path' => './sites/all/themes/bootstrap_subtheme/images/designer-buddy.jpg', 'alt' => 'Mascotte de Minima')); ?>
+          <?php print theme('image', array('path' => path_to_theme().'/images/designer-buddy.jpg', 'alt' => 'Mascotte de Minima')); ?>
           <h1>Looking for rockstar graphic designers?</h1>
           <p class="sub-title">Look no further... we are here to help!</p>
         </div>
@@ -118,12 +118,12 @@
           <div class="col-md-6 col-sm-12">
             <ul class="row list-unstyled">
               <li class="col-xs-6">
-                <?php print theme('image', array('path' => './sites/all/themes/bootstrap_subtheme/images/latest-pix.jpg', 'alt' => 'Aperçu du site PIX Web Design')); ?>
+                <?php print theme('image', array('path' => path_to_theme().'/images/latest-pix.jpg', 'alt' => 'Aperçu du site PIX Web Design')); ?>
                 <h3>PIX Web Design</h3>
                 <p>Graphic Design</p>
               </li>
               <li class="col-xs-6">
-                <?php print theme('image', array('path' => './sites/all/themes/bootstrap_subtheme/images/latest-wp.jpg', 'alt' => 'Aperçu du site Plugin Planet')); ?>
+                <?php print theme('image', array('path' => path_to_theme().'/images/latest-wp.jpg', 'alt' => 'Aperçu du site Plugin Planet')); ?>
                 <h3>Plugin Planet – Wordpress</h3>
                 <p>Pixel Design</p>
               </li>
@@ -132,12 +132,12 @@
           <div class="col-md-6 col-sm-12">
             <ul class="row list-unstyled">
               <li class="col-xs-6">
-                <?php print theme('image', array('path' => './sites/all/themes/bootstrap_subtheme/images/latest-fresh.jpg', 'alt' => 'Aperçu du site Fresh Application')); ?>
+                <?php print theme('image', array('path' => path_to_theme().'/images/latest-fresh.jpg', 'alt' => 'Aperçu du site Fresh Application')); ?>
                 <h3>Fresh application</h3>
                 <p>Wordpress Theme</p>
               </li>
               <li class="col-xs-6">
-                <?php print theme('image', array('path' => './sites/all/themes/bootstrap_subtheme/images/latest-mailapp.jpg', 'alt' => 'Aperçu du site iPhone Mail App')); ?>
+                <?php print theme('image', array('path' => path_to_theme().'/images/latest-mailapp.jpg', 'alt' => 'Aperçu du site iPhone Mail App')); ?>
                 <h3>iPhone Mail App</h3>
                 <p>Booking</p>
               </li>
@@ -200,10 +200,10 @@
           <p class="media"><span class="media__cover glyphicon glyphicon-envelope"></span> contact@localhost</p>
 
           <ul class="social list-inline">
-            <li><a href="#"><?php print theme('image', array('path' => './sites/all/themes/bootstrap_subtheme/images/social-fb.png', 'alt' => 'Facebook')); ?></a></li>
-            <li><a href="#"><?php print theme('image', array('path' => './sites/all/themes/bootstrap_subtheme/images/social-d.png', 'alt' => 'Dribbble')); ?></a></li>
-            <li><a href="#"><?php print theme('image', array('path' => './sites/all/themes/bootstrap_subtheme/images/social-t.png', 'alt' => 'Twitter')); ?></a></li>
-            <li><a href="#"><?php print theme('image', array('path' => './sites/all/themes/bootstrap_subtheme/images/social-rss.png', 'alt' => 'RSS')); ?></a></li>
+            <li><a href="#"><?php print theme('image', array('path' => path_to_theme().'/images/social-fb.png', 'alt' => 'Facebook')); ?></a></li>
+            <li><a href="#"><?php print theme('image', array('path' => path_to_theme().'/images/social-d.png', 'alt' => 'Dribbble')); ?></a></li>
+            <li><a href="#"><?php print theme('image', array('path' => path_to_theme().'/images/social-t.png', 'alt' => 'Twitter')); ?></a></li>
+            <li><a href="#"><?php print theme('image', array('path' => path_to_theme().'/images/social-rss.png', 'alt' => 'RSS')); ?></a></li>
           </ul>
         </div>
         <div class="col-md-4 col-sm-6">
