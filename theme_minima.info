@@ -7,14 +7,15 @@ core = 7.x
 ;; Regions
 ;;;;;;;;;;;;;;;;;;;;;
 
-;regions[navigation]     = 'Navigation'
-;regions[header]         = 'Top Bar'
+regions[header]         = 'Top Bar'
+regions[navigation]     = 'Navigation'
 ;regions[highlighted]    = 'Highlighted'
 ;regions[help]           = 'Help'
-;regions[content]        = 'Content'
+regions[content]        = 'Content'
 ;regions[sidebar_first]  = 'Primary'
 ;regions[sidebar_second] = 'Secondary'
-;regions[footer]         = 'Footer'
+regions[footer]         = 'Footer'
+regions[copyright]      = 'Copyright'
 ;regions[page_top]       = 'Page top'
 ;regions[page_bottom]    = 'Page bottom'
 
@@ -36,11 +37,11 @@ stylesheets[all][] = css/style.css
 ; ;----------------------------------
 ; ; METHOD 1: Bootstrap Source Files
 ; ;----------------------------------
-; 
+;
 ; ;;;;;;;;;;;;;;;;;;;;;
 ; ;; Scripts
 ; ;;;;;;;;;;;;;;;;;;;;;
-; 
+;
 ; scripts[] = 'bootstrap/js/affix.js'
 ; scripts[] = 'bootstrap/js/alert.js'
 ; scripts[] = 'bootstrap/js/button.js'
@@ -84,4 +85,3 @@ exclude[css][] = 'modules/field/theme/field.css'
 exclude[css][] = 'modules/node/node.css'
 exclude[css][] = 'modules/search/search.css'
 exclude[css][] = 'modules/user/user.css'
-

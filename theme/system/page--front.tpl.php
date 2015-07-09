@@ -239,5 +239,5 @@
       </div>
     </div>
   </div>
-  <p class="container copyright"><small>Copyright © 2012 Designer First. All rights reserved.</small></p>
+  <p class="container copyright mb0"><small>Copyright © 2012 Designer First. All rights reserved.</small></p>
 </footer>

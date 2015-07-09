@@ -78,7 +78,7 @@
   <a class="skip__link element-invisible element-focusable" href="#main-content"><?php print t('Skip to main content'); ?></a>
 </div>
 
-<header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+<header class="navbar bs-docs-nav" id="top" role="banner">
   <div class="container">
     <div class="navbar-header">
       <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
@@ -90,67 +90,26 @@
       <a class="brand" href="#"><?php print theme('image', array('path' => path_to_theme().'/images/minima-logo-desktop.jpg', 'alt' => 'Minima', 'class' => 'brand-logo')); ?></a>
     </div>
     <nav id="bs-navbar" class="collapse navbar-collapse">
-      <ul id="navigation" class="navigation">
-        <li class="navigation__item"><a class="navigation__link" href="">Home</a></li>
-        <li class="navigation__item"><a class="navigation__link" href="">Portfolio</a></li>
-        <li class="navigation__item"><a class="navigation__link" href="">Blog</a></li>
-        <li class="navigation__item"><a class="navigation__link" href="">About</a></li>
-        <li class="navigation__item"><a class="navigation__link" href="">Contact</a></li>
-      </ul>
+      <?php if (!empty($primary_nav)): ?>
+          <?php echo render($primary_nav); ?>
+      <?php endif; ?>
+      <?php if (!empty($secondary_nav)): ?>
+          <?php echo render($secondary_nav); ?>
+      <?php endif; ?>
+      <?php if (!empty($page['navigation'])): ?>
+          <?php echo render($page['navigation']); ?>
+      <?php endif; ?>
     </nav>
   </div>
 </header>
 
 <main>
   <div class="container" id="main-content">
+    <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
+
     <div class="page">
-      <header role="banner" id="page-header">
-        <?php if (!empty($site_slogan)): ?>
-          <p class="lead"><?php print $site_slogan; ?></p>
-        <?php endif; ?>
-
-        <?php print render($page['header']); ?>
-      </header> <!-- /#page-header -->
-
-      <div class="row">
-
-        <?php if (!empty($page['sidebar_first'])): ?>
-          <aside class="col-sm-3" role="complementary">
-            <?php print render($page['sidebar_first']); ?>
-          </aside>  <!-- /#sidebar-first -->
-        <?php endif; ?>
-
-        <section<?php print $content_column_class; ?>>
-          <?php if (!empty($page['highlighted'])): ?>
-            <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
-          <?php endif; ?>
-          <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
-          <a id="main-content"></a>
-          <?php print render($title_prefix); ?>
-          <?php if (!empty($title)): ?>
-            <h1 class="page-header"><?php print $title; ?></h1>
-          <?php endif; ?>
-          <?php print render($title_suffix); ?>
-          <?php print $messages; ?>
-          <?php if (!empty($tabs)): ?>
-            <?php print render($tabs); ?>
-          <?php endif; ?>
-          <?php if (!empty($page['help'])): ?>
-            <?php print render($page['help']); ?>
-          <?php endif; ?>
-          <?php if (!empty($action_links)): ?>
-            <ul class="action-links"><?php print render($action_links); ?></ul>
-          <?php endif; ?>
-          <?php print render($page['content']); ?>
-        </section>
-
-        <?php if (!empty($page['sidebar_second'])): ?>
-          <aside class="col-sm-3" role="complementary">
-            <?php print render($page['sidebar_second']); ?>
-          </aside>  <!-- /#sidebar-second -->
-        <?php endif; ?>
-
-      </div>
+      <?php print $messages; ?>
+      <?php print render($page['content']); ?>
     </div>
   </div>
 </main>
@@ -159,59 +118,9 @@
   <div class="footer">
     <div class="container">
       <div class="row">
-        <div class="col-md-4 col-sm-6">
-          <h2 class="h3 footer__title">Contact us</h2>
-          <div class="media">
-            <span class="media__cover glyphicon glyphicon-home"></span>
-            <p class="media__body">
-              500 Main street<br>
-              Toronto, Ontario<br>
-              L3R 1L5, Canada
-            </p>
-          </div>
-
-          <p class="media"><span class="media__cover glyphicon glyphicon-earphone"></span> (123) 456-7890</p>
-          <p class="media"><span class="media__cover glyphicon glyphicon-envelope"></span> contact@localhost</p>
-
-          <ul class="social list-inline">
-            <li><a href="#"><?php print theme('image', array('path' => path_to_theme().'/images/social-fb.png', 'alt' => 'Facebook')); ?></a></li>
-            <li><a href="#"><?php print theme('image', array('path' => path_to_theme().'/images/social-d.png', 'alt' => 'Dribbble')); ?></a></li>
-            <li><a href="#"><?php print theme('image', array('path' => path_to_theme().'/images/social-t.png', 'alt' => 'Twitter')); ?></a></li>
-            <li><a href="#"><?php print theme('image', array('path' => path_to_theme().'/images/social-rss.png', 'alt' => 'RSS')); ?></a></li>
-          </ul>
-        </div>
-        <div class="col-md-4 col-sm-6">
-          <h2 class="h3 footer__title">Latest tweets</h2>
-          <div class="media">
-            <span class="media__cover glyphicon glyphicon-comment"></span>
-            <p class="media__body">Duis sit amet sollicitudin justo. Nunc interdum, nisi at hendrerit molestie, nunc ligula iaculis sapien, eget efficitur velit massa vel sed.</p>
-          </div>
-          <div class="media">
-            <span class="media__cover glyphicon glyphicon-comment"></span>
-            <p class="media__body">Nunc euismod imperdiet quam, ac aliquet ante sodales sed. Nulla risus ante, dignissim at efficitur at, ornare at urna. Nulla finibus nullam.</p>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-12">
-          <h2 class="h3 footer__title">Latest posts</h2>
-          <div class="media">
-            <span class="media__cover glyphicon glyphicon-pencil"></span>
-            <p class="media__body">Lorem ipsum dolor sit.</p>
-          </div>
-          <div class="media">
-            <span class="media__cover glyphicon glyphicon-pencil"></span>
-            <p class="media__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error rerum perferendis, asperiores dolorem soluta possimus.</p>
-          </div>
-          <div class="media">
-            <span class="media__cover glyphicon glyphicon-pencil"></span>
-            <p class="media__body">Lorem ipsum dolor sit amet.</p>
-          </div>
-          <div class="media">
-            <span class="media__cover glyphicon glyphicon-pencil"></span>
-            <p class="media__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, nemo.</p>
-          </div>
-        </div>
+        <?php echo render($page['footer']); ?>
       </div>
     </div>
   </div>
-  <p class="container copyright"><small>Copyright © 2012 Designer First. All rights reserved.</small></p>
+  <?php echo render($page['copyright']); ?>
 </footer>
