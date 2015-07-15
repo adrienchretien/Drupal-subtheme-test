@@ -108,7 +108,6 @@
     <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
 
     <div class="page">
-      <?php print $messages; ?>
       <?php print render($page['content']); ?>
     </div>
   </div>
