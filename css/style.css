@@ -5139,14 +5139,17 @@ h3,
   text-decoration: none; }
 
 .page {
+  margin-top: 3em; }
+
+.page--front {
   margin-top: 6em; }
+
+.page__section {
+  margin-bottom: 3em; }
 
 .page__section--header {
   border: 0;
   text-align: center; }
-
-.page__section {
-  margin-bottom: 3em; }
 
 .skip {
   height: 1.5em; }

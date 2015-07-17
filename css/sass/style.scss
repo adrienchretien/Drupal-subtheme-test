@@ -188,15 +188,20 @@ h3,
 }
 
 .page {
-  margin-top: 6em;
+  margin-top: 3em;
 }
-.page__section--header {
-  border: 0;
-  text-align: center;
+
+.page--front {
+  margin-top: 6em;
 }
 
 .page__section {
   margin-bottom: 3em;
+}
+
+.page__section--header {
+  border: 0;
+  text-align: center;
 }
 
 .skip {

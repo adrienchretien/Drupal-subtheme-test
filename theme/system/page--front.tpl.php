@@ -113,7 +113,7 @@ $field_displayed_sub_title = field_get_items('node', $node, 'field_displayed_sub
   <div class="container" id="main-content">
     <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
 
-    <div class="page">
+    <div class="page page--front">
       <header>
         <div class="page__section page__section--header">
           <?php print theme('image', array('path' => file_create_url($field_cover['uri']), 'alt' => $field_cover['alt'])); ?>

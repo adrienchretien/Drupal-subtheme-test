@@ -87,7 +87,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="brand" href="#"><?php print theme('image', array('path' => path_to_theme().'/images/minima-logo-desktop.jpg', 'alt' => 'Minima', 'class' => 'brand-logo')); ?></a>
+      <a class="brand" href="/"><?php print theme('image', array('path' => path_to_theme().'/images/minima-logo-desktop.jpg', 'alt' => 'Minima', 'class' => 'brand-logo')); ?></a>
     </div>
     <nav id="bs-navbar" class="collapse navbar-collapse">
       <?php if (!empty($primary_nav)): ?>
