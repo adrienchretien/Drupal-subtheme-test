@@ -71,7 +71,13 @@
  * @see html.tpl.php
  *
  * @ingroup themeable
+
  */
+
+$field_cover = field_get_items('node', $node, 'field_cover')[0];
+$field_displayed_title = field_get_items('node', $node, 'field_displayed_title')[0];
+$field_displayed_sub_title = field_get_items('node', $node, 'field_displayed_sub_title')[0];
+
 ?>
 <div class="skip container">
   <a class="skip__link element-invisible element-focusable" href="#navigation"><?php print t('Skip to navigation'); ?></a>
@@ -87,96 +93,35 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="brand" href="#"><?php print theme('image', array('path' => path_to_theme().'/images/minima-logo-desktop.jpg', 'alt' => 'Minima', 'class' => 'brand-logo')); ?></a>
+      <a class="brand" href="/"><?php print theme('image', array('path' => path_to_theme().'/images/minima-logo-desktop.jpg', 'alt' => 'Minima', 'class' => 'brand-logo')); ?></a>
     </div>
     <nav id="bs-navbar" class="collapse navbar-collapse">
-      <ul id="navigation" class="navigation">
-        <li class="navigation__item"><a class="navigation__link" href="">Home</a></li>
-        <li class="navigation__item"><a class="navigation__link" href="">Portfolio</a></li>
-        <li class="navigation__item"><a class="navigation__link" href="">Blog</a></li>
-        <li class="navigation__item"><a class="navigation__link" href="">About</a></li>
-        <li class="navigation__item"><a class="navigation__link" href="">Contact</a></li>
-      </ul>
+      <?php if (!empty($primary_nav)): ?>
+          <?php echo render($primary_nav); ?>
+      <?php endif; ?>
+      <?php if (!empty($secondary_nav)): ?>
+          <?php echo render($secondary_nav); ?>
+      <?php endif; ?>
+      <?php if (!empty($page['navigation'])): ?>
+          <?php echo render($page['navigation']); ?>
+      <?php endif; ?>
     </nav>
   </div>
 </header>
 
 <main>
   <div class="container" id="main-content">
+    <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
+
     <div class="page">
       <header>
         <div class="page__section page__section--header">
-          <?php print theme('image', array('path' => path_to_theme().'/images/designer-buddy.jpg', 'alt' => 'Mascotte de Minima')); ?>
-          <h1>Looking for rockstar graphic designers?</h1>
-          <p class="sub-title">Look no further... we are here to help!</p>
+          <?php print theme('image', array('path' => file_create_url($field_cover['uri']), 'alt' => $field_cover['alt'])); ?>
+          <h1><?php echo $field_displayed_title['safe_value']; ?></h1>
+          <p class="sub-title"><?php echo $field_displayed_sub_title['safe_value']; ?></p>
         </div>
       </header>
-
-      <div class="page__section">
-        <h2>Latest projects</h2>
-        <div class="row">
-          <div class="col-md-6 col-sm-12">
-            <ul class="row list-unstyled">
-              <li class="col-xs-6">
-                <?php print theme('image', array('path' => path_to_theme().'/images/latest-pix.jpg', 'alt' => 'Aperçu du site PIX Web Design')); ?>
-                <h3>PIX Web Design</h3>
-                <p>Graphic Design</p>
-              </li>
-              <li class="col-xs-6">
-                <?php print theme('image', array('path' => path_to_theme().'/images/latest-wp.jpg', 'alt' => 'Aperçu du site Plugin Planet')); ?>
-                <h3>Plugin Planet – Wordpress</h3>
-                <p>Pixel Design</p>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-6 col-sm-12">
-            <ul class="row list-unstyled">
-              <li class="col-xs-6">
-                <?php print theme('image', array('path' => path_to_theme().'/images/latest-fresh.jpg', 'alt' => 'Aperçu du site Fresh Application')); ?>
-                <h3>Fresh application</h3>
-                <p>Wordpress Theme</p>
-              </li>
-              <li class="col-xs-6">
-                <?php print theme('image', array('path' => path_to_theme().'/images/latest-mailapp.jpg', 'alt' => 'Aperçu du site iPhone Mail App')); ?>
-                <h3>iPhone Mail App</h3>
-                <p>Booking</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="page__section">
-        <h2>How can we help you?</h2>
-        <div class="row">
-          <div class="col-md-4">
-            <h3><span class="glyphicon glyphicon-tint"></span> Web design</h3>
-            <p>Hodor, hodor. Hodor. Hodor, hodor - HODOR hodor, hodor hodor hodor hodor hodor! Hodor. Hodor hodor; hodor hodor. Hodor hodor HODOR! Hodor hodor; hodor hodor - hodor hodor. Hodor hodor HODOR! Hodor hodor hodor hodor, hodor. Hodor hodor. Hodor. Hodor hodor, hodor. Hodor hodor hodor! Hodor! Hodor hodor, hodor... Hodor hodor hodor... Hodor hodor hodor?! Hodor hodor... Hodor hodor hodor - hodor. Hodor! Hodor hodor, hodor, hodor. Hodor hodor, hodor.</p>
-          </div>
-          <div class="col-md-4">
-            <h3><span class="glyphicon glyphicon-tint"></span> Wordpress</h3>
-            <p>Bacon ipsum dolor amet tri-tip pork belly kielbasa pastrami brisket jerky filet mignon, strip steak ground round. Ground round beef ribs pancetta, meatball brisket chicken short loin shankle cow ham leberkas. Alcatra ham hock biltong, andouille pork belly tongue tenderloin pastrami shankle jerky pork chop pork loin. Jowl tongue t-bone tenderloin, beef ribs hamburger frankfurter short loin salami andouille picanha landjaeger biltong fatback.</p>
-          </div>
-          <div class="col-md-4">
-            <h3><span class="glyphicon glyphicon-tint"></span> Social media</h3>
-            <p>That's Calvin Klein, oh my god, he's a dream. He's absolutely right, Marty. the last thing you need is headaches. I don't know, I can't keep up with all of your boyfriends. Marty, that was very interesting music. Scram, McFly. I don't like her, Marty. Any girl who calls a boy is just asking for trouble. Maybe you were adopted. Right. Alright, okay. Alright, there she is, George. Just go in there and invite her. That's for messing up my hair.</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <h3><span class="glyphicon glyphicon-tint"></span> Branding</h3>
-            <p>Hey wait, wait a minute, who are you? Stella, another one of these damn kids jumped in front of my car. Come on out here, help me take him in the house. Good, you could start by sweeping the floor. Check out that four by four. That is hot. Someday, Jennifer, someday. Wouldn't it be great to take that truck up to the lake. Throw a couple of sleeping bags in the back. Lie out under the stars. I have to tell you about the future. Doc, wait. No, bastards.</p>
-          </div>
-          <div class="col-md-4">
-            <h3><span class="glyphicon glyphicon-tint"></span> Print design</h3>
-            <p>Bacon ipsum dolor amet fatback hamburger cow shank. Beef frankfurter salami kevin, chuck doner pancetta sausage short ribs venison porchetta. Meatloaf beef salami cupim strip steak frankfurter ground round. Short loin kevin shoulder cow, turducken hamburger sausage meatloaf beef ribs flank jerky ball tip porchetta bresaola. Frankfurter pork pork belly pork chop ham hock. Chuck pancetta porchetta short loin, landjaeger beef ribs prosciutto cow.</p>
-          </div>
-          <div class="col-md-4">
-            <h3><span class="glyphicon glyphicon-tint"></span> Search engine optimization</h3>
-            <p>Hodor hodor - hodor, hodor. Hodor hodor... Hodor hodor hodor hodor! Hodor, hodor; hodor hodor; hodor hodor. Hodor. Hodor. Hodor hodor; hodor hodor, hodor. Hodor hodor?! Hodor hodor - hodor hodor hodor, hodor. Hodor hodor hodor. Hodor! Hodor hodor, HODOR hodor, hodor hodor - hodor. Hodor! Hodor hodor, hodor HODOR hodor, hodor hodor; hodor hodor. Hodor. Hodor, hodor. Hodor. Hodor, hodor; hodor hodor - HODOR hodor, hodor hodor, hodor, hodor hodor. </p>
-          </div>
-        </div>
-      </div>
+      <?php print render($page['content']); ?>
     </div>
   </div>
 </main>
@@ -184,60 +129,8 @@
 <footer>
   <div class="footer">
     <div class="container">
-      <div class="row">
-        <div class="col-md-4 col-sm-6">
-          <h2 class="h3 footer__title">Contact us</h2>
-          <div class="media">
-            <span class="media__cover glyphicon glyphicon-home"></span>
-            <p class="media__body">
-              500 Main street<br>
-              Toronto, Ontario<br>
-              L3R 1L5, Canada
-            </p>
-          </div>
-
-          <p class="media"><span class="media__cover glyphicon glyphicon-earphone"></span> (123) 456-7890</p>
-          <p class="media"><span class="media__cover glyphicon glyphicon-envelope"></span> contact@localhost</p>
-
-          <ul class="social list-inline">
-            <li><a href="#"><?php print theme('image', array('path' => path_to_theme().'/images/social-fb.png', 'alt' => 'Facebook')); ?></a></li>
-            <li><a href="#"><?php print theme('image', array('path' => path_to_theme().'/images/social-d.png', 'alt' => 'Dribbble')); ?></a></li>
-            <li><a href="#"><?php print theme('image', array('path' => path_to_theme().'/images/social-t.png', 'alt' => 'Twitter')); ?></a></li>
-            <li><a href="#"><?php print theme('image', array('path' => path_to_theme().'/images/social-rss.png', 'alt' => 'RSS')); ?></a></li>
-          </ul>
-        </div>
-        <div class="col-md-4 col-sm-6">
-          <h2 class="h3 footer__title">Latest tweets</h2>
-          <div class="media">
-            <span class="media__cover glyphicon glyphicon-comment"></span>
-            <p class="media__body">Duis sit amet sollicitudin justo. Nunc interdum, nisi at hendrerit molestie, nunc ligula iaculis sapien, eget efficitur velit massa vel sed.</p>
-          </div>
-          <div class="media">
-            <span class="media__cover glyphicon glyphicon-comment"></span>
-            <p class="media__body">Nunc euismod imperdiet quam, ac aliquet ante sodales sed. Nulla risus ante, dignissim at efficitur at, ornare at urna. Nulla finibus nullam.</p>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-12">
-          <h2 class="h3 footer__title">Latest posts</h2>
-          <div class="media">
-            <span class="media__cover glyphicon glyphicon-pencil"></span>
-            <p class="media__body">Lorem ipsum dolor sit.</p>
-          </div>
-          <div class="media">
-            <span class="media__cover glyphicon glyphicon-pencil"></span>
-            <p class="media__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error rerum perferendis, asperiores dolorem soluta possimus.</p>
-          </div>
-          <div class="media">
-            <span class="media__cover glyphicon glyphicon-pencil"></span>
-            <p class="media__body">Lorem ipsum dolor sit amet.</p>
-          </div>
-          <div class="media">
-            <span class="media__cover glyphicon glyphicon-pencil"></span>
-            <p class="media__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, nemo.</p>
-          </div>
-        </div>
-      </div>
+      <?php echo render($page['footer']); ?>
     </div>
   </div>
-  <p class="container copyright mb0"><small>Copyright © 2012 Designer First. All rights reserved.</small></p>
+  <?php echo render($page['copyright']); ?>
 </footer>
