@@ -12,9 +12,9 @@
  * @see icon_preprocess_icon_image()
  * @see template_preprocess_icon()
  */
-function bootstrap_preprocess_icon(&$variables) {
+function theme_minima_preprocess_icon(&$variables) {
   $bundle = &$variables['bundle'];
-  if ($bundle['provider'] === 'bootstrap') {
+  if ($bundle['provider'] === 'glyphicons') {
     $variables['attributes']['class'][] = 'glyphicon';
   }
 }

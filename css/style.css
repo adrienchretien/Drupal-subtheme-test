@@ -5079,8 +5079,13 @@ h3,
   background-color: #555555;
   color: #fff; }
 
+.footer__container {
+  padding-bottom: 1.5em;
+  padding-top: 1.5em; }
+
 .footer__title {
-  color: #ff61a0; }
+  color: #ff61a0;
+  margin: 0 0 15px; }
 
 .icon-bar {
   background-color: #000; }

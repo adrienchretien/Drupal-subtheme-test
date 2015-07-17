@@ -9,15 +9,15 @@ core = 7.x
 
 regions[header]         = 'Top Bar'
 regions[navigation]     = 'Navigation'
-;regions[highlighted]    = 'Highlighted'
-;regions[help]           = 'Help'
+; regions[highlighted]    = 'Highlighted'
+; regions[help]           = 'Help'
 regions[content]        = 'Content'
-;regions[sidebar_first]  = 'Primary'
-;regions[sidebar_second] = 'Secondary'
+; regions[sidebar_first]  = 'Primary'
+; regions[sidebar_second] = 'Secondary'
 regions[footer]         = 'Footer'
 regions[copyright]      = 'Copyright'
-;regions[page_top]       = 'Page top'
-;regions[page_bottom]    = 'Page bottom'
+; regions[page_top]       = 'Page top'
+; regions[page_bottom]    = 'Page bottom'
 
 
 ;;;;;;;;;;;;;;;;;;;;;
@@ -25,9 +25,9 @@ regions[copyright]      = 'Copyright'
 ;;;;;;;;;;;;;;;;;;;;;
 
 stylesheets[all][] = css/style.css
-;stylesheets[all][] = css/ie.css
-;stylesheets[all][] = css/print.css
-;stylesheets[all][] = css/screen.css
+; stylesheets[all][] = css/ie.css
+; stylesheets[all][] = css/print.css
+; stylesheets[all][] = css/screen.css
 
 
 ; For information on choosing the desired method, please read the Drupal

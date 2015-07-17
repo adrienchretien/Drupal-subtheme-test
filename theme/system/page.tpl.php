@@ -115,10 +115,8 @@
 
 <footer>
   <div class="footer">
-    <div class="container">
-      <div class="row">
-        <?php echo render($page['footer']); ?>
-      </div>
+    <div class="container footer__container">
+      <?php echo render($page['footer']); ?>
     </div>
   </div>
   <?php echo render($page['copyright']); ?>

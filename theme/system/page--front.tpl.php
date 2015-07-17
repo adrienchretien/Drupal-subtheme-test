@@ -128,7 +128,7 @@ $field_displayed_sub_title = field_get_items('node', $node, 'field_displayed_sub
 
 <footer>
   <div class="footer">
-    <div class="container">
+    <div class="container footer__container">
       <?php echo render($page['footer']); ?>
     </div>
   </div>

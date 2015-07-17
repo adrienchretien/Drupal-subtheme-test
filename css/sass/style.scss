@@ -121,8 +121,14 @@ h3,
   color: #fff;
 }
 
+.footer__container {
+  padding-bottom: 1.5em;
+  padding-top: 1.5em;
+}
+
 .footer__title {
   color: $brand-primary;
+  margin: 0 0 15px;
 }
 
 .icon-bar { background-color: #000; }

@@ -25,9 +25,14 @@
  */
 
 $title = $fields['title'];
+$icon = $fields['field_icon'];
 ?>
 <div class="media">
-  <div class="media__cover glyphicon glyphicon-pencil"></div>
+  <?php if($icon): ?>
+    <div class="media__cover">
+      <?php print $icon->content; ?>
+    </div>
+  <?php endif; ?>
   <div class="media__body">
     <?php print $title->content; ?>
   </div>
